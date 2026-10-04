@@ -1,0 +1,5 @@
+import { ArrowUpRight } from 'lucide-react';
+import Reveal from '../animation/Reveal';
+import { sports, stats } from '../../data/siteData';
+
+export default function Life(){return <section className="life" id="life"><div className="life-visual"><div className="life-photo"><div className="photo-stamp">TIS<br/><small>LIFE</small></div></div></div><div className="life-content"><Reveal><p className="eyebrow">03 / LIFE AT TIS</p><h2>Find your <i>thing.</i></h2><p className="large-copy">From the field to the studio, every student gets space to discover a strength they did not know they had.</p></Reveal><div className="sports-wrap"><p className="mini-label">A glimpse of 16+ sports</p><div className="sports-list">{sports.map(s=><span key={s}>{s}</span>)}</div></div><a className="arrow-link" href="#admissions">Explore life at Tulas <ArrowUpRight size={17}/></a></div><div className="stats-strip">{stats.map((s,i)=><Reveal key={s.label} delay={i*.06}><div className="stat"><strong>{s.value}</strong><span>{s.label}</span></div></Reveal>)}</div></section>}
